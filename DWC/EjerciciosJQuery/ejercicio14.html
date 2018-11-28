@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Evento on click elemento nuevo</title>
+        <script src="jquery-3.3.1.min.js"></script>
+        </head>
+
+    <body>
+        <header>
+            <h1 class="intro">Encabezado</h1>
+        </header>
+        <section>
+            <article>
+                <label>Cuadro de texto 1: </label><input type="text" name="">
+                <br>
+                <label>Cuadro de texto 2: </label><input type="text" name="">
+            </article>
+        </section>
+
+    <script type="text/javascript">
+        //Dejamos cargar todo el documento 
+        $(function(){
+            //Anadimos una accion para cuando nos posicionemos sobre un parrafo (p)
+            // y cuando abandonemos el area del parrafo (p)
+            $('input[type="text"]').focus(function(e){
+                //Se mostara una alerta avisando que se ha entrado en el area del parrafo y el numero del mismo
+                $(e.target).css({'background-color':'black', 'color':'white'});
+            });
+            $('input[type="text"]').blur(function(e){
+                //Se muestra una alerta avisando que se ha abandonado el area del parrafo (p) y el numero del mismo
+                $(e.target).css({'background-color':'lightblue', 'color':'green'});
+            });
+        });
+    </script>
+    </body>
+</html>

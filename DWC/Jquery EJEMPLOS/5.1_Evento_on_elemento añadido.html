@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>22 Evento on click elemento nuevo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+<body>
+	<h1 >   Evento on click elemento nuevo      </h1>
+	<ol id="lista">
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		<li>Elemento 4</li>
+		<li>Elemento 5</li>
+	</ol>
+	<button id="btn_1">Nuevo Elemento</button>
+	
+	<script type="text/javascript">
+	$(function(){
+		$("#btn_1").click(function(){
+			$('ol').append('<li>Nuevo Elemento</li>');//append agraga un nuevo elemento al final
+		});
+		/*$('li').on('click',function (){//De esta forma no funciona para los li que se añaden en tiempo de ejecución
+			alert ("li pulsado");
+		});*/
+
+		$('#lista').on('click','li',function (){//para que funcione el click sobre elementos nuevos hay qu eusar el on de esta forma. Sustituye a versiones anterires live() y delegate()
+			alert ("li pulsado");
+		});	
+		});
+	</script>
+</body>
+</html

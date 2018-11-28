@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<meta charset="UTF-8">
+        <title>Evento on click elemento nuevo</title>
+        <script src="jquery-3.3.1.min.js"></script>
+        </head>
+
+    <body>
+        <header>
+            <h1 class="intro">Encabezado</h1>
+        </header>
+        <section>
+            <article>
+                <p>Lista 1:</p>
+                <a href="">Tortilla</a><br>
+                <a href="">Jamon</a>
+            </article>
+        </section>
+        <button class="ocultar" type="button">Ocultar enlace 1</button>
+        <button class="ocultar" type="button">Mostrar enlace 2</button>
+
+    <script type="text/javascript">
+        //Dejamos cargar todo el documento
+        $(function(){
+            //Anadimos o modificamos un atributo  del primer enlace tenga el documento
+            $('a:first').attr('target', '_blank');
+            $('#ocultar').click(function(){
+                $('a:first').attr('target', 'blank');
+            });
+            $('#mostrar').click(function(){
+                $('a').show('fast');
+            });*/
+        });
+    </script>
+
+    </body>
+</html>

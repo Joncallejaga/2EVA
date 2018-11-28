@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<meta charset="UTF-8">
+        <title>Evento on click elemento nuevo</title>
+        <script src="jquery-3.3.1.min.js"></script>
+        </head>
+
+    <body>
+        <header>
+            <h1 class="intro">Encabezado</h1>
+        </header>
+        <section>
+            <article>
+                <p>Lista 1:</p>
+                <a href="">Tortilla</a><br>
+                <a href="">Jamon</a>
+            </article>
+        </section>
+        <button id="ocultar" type="button">Ocultar</button>
+        <button id="mostrar" type="button">Mostrar</button>
+
+    <script type="text/javascript">
+        //Dejamos cargar todo el documento
+        $(function(){
+            //Anadimos una accion para cuando se pulse el boton Ocultar
+            $('#ocultar').click(function(){
+                //Ocultamos todos los enlaces (a) del documento
+                $('a').hide('fast');
+            });
+            //Anadimos una accion para cuando se pulse el boton Mostrar
+            $('#mostrar').click(function(){
+                //Mostramos todos los enlaces (a) del documento
+                $('a').show('fast');
+            });
+        });
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<meta charset="UTF-8">
+        <title>Evento on click elemento nuevo</title>
+        <script src="jquery-3.3.1.min.js"></script>
+        </head>
+
+    <body>
+        <header>
+            <h1 class="intro">Encabezado</h1>
+        </header>
+        <section>
+            <article>
+                <table>
+                    <caption>Tabla de Colores</caption>
+                    <tr>
+                        <td>fila 1</td>
+                    </tr>
+                     <tr>
+                        <td>fila 2</td>
+                    </tr> 
+                    <tr>
+                        <td>fila 3</td>
+                    </tr> 
+
+                    <tr>
+                        <td>fila 4</td>
+                    </tr> 
+                    <tr>
+                        <td>fila 5</td>
+                    </tr> 
+                    <tr>
+                        <td>fila 6</td>
+                    </tr> 
+                    <tr>
+                        <td>fila 7</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+    <script type="text/javascript">
+        //Dejamos cargar todo el documento
+        $(function(){
+            //Modificamos algunos atributos del estilo del elemento Table
+            //Como podemos ver a continuacion, se puede modificar mas de un atributo en la misma instruccion
+            $('table').css({'width':'50%', 'text-align':'center', 'margin':'0 auto'});
+            //Cambiamos el color de todas las filas impares (even) de la tabla
+            $('tr:nth-child(even)').css('background-color', 'red');
+            //Cambiamos el valor de todas las fias pares (odd) de la tabla
+            $('tr:nth-child(odd)').css('background-color', 'green');
+        });
+    </script>
+
+    </body>
+</html>

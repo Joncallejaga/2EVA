@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<meta charset="UTF-8">
+        <title>Evento on click elemento nuevo</title>
+        <script src="jquery-3.3.1.min.js"></script>
+        </head>
+
+    <body>
+        <header>
+            <h1 class="intro">Encabezado</h1>
+        </header>
+        <section>
+            <article>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </article>
+        </section>
+
+    <script type="text/javascript">
+        //Dejamos cargar todo el documento
+        $(function(){
+            //Anadimos una accion para cuando haga un hagamos click con el boton derecho sobre un parrafo (p)
+            $('p').on('contextmenu', function(e){
+                //Se mostara una alerta avisando que has pulsado sobre el parrafo y el numero del mismo
+                alert('Has pulsado el boton derecho sobre el parrafo ' + ($(e.target).index()+1));
+            });
+        });
+    </script>
+    </body>
+</html>
