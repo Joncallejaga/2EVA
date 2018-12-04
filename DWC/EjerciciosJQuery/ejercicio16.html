@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Evento on click elemento nuevo</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <header></header>
+    <p id="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi itaque
+      quaerat at impedit delectus magnam nam dolore quia similique minima! Vitae
+      sint, adipisci temporibus dignissimos quas eos reiciendis optio maiores.
+    </p>
+
+    <script type="text/javascript">
+      //Dejamos cargar todo el documento
+      $(function() {
+        //Anadimos una accion para cuando nos posicionemos sobre un parrafo (p)
+        // y cuando abandonemos el area del parrafo (p)
+        $('#parrafo').click(function() {
+
+          $(this).fadeOut("fast");
+        });
+      });
+    </script>
+  </body>
+</html>
